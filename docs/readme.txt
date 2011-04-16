@@ -1,5 +1,5 @@
-Splash Screen Updater
-=================
+Splash Screen Updater (SSU) README
+==================================
 
 About
 =====
@@ -20,3 +20,8 @@ Release Date
 ==========
 April 2011
 
+Wiki
+====
+The Wiki for this project is here:
+
+https://bitbucket.org/str/splashscreenupdater/wiki
