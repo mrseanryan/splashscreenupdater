@@ -9,6 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SplashScreenUpdater</RootNamespace>
     <AssemblyName>SplashScreenUpdater</AssemblyName>
+    <ApplicationIcon>ssu.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -38,6 +39,9 @@
     <Compile Include="BmpTextWriter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ssu.ico" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="test_data\" />
