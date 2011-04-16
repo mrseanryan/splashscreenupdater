@@ -1,8 +1,16 @@
-#ignore files for Visual Studio
-#
 #using glob syntax.
 syntax: glob
 
+#CVS files:
+CVS
+Entries
+Entries.Extra
+Entries.Extra.Old
+Entries.Old
+Repository
+Root
+
+#ignore files for Visual Studio
 *.pdb
 *.pch
 *.ncb
@@ -14,3 +22,10 @@ syntax: glob
 *.tlh
 *.idb
 *.sbr
+*.suo
+*.vshost.exe
+*.csproj.user
+*.csproj.FileListAbsolute.txt
+
+#Windows Explorer:
+Thumbs.db
