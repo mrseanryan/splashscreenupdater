@@ -54,4 +54,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /Y $(TargetPath) $(SolutionDir)\..\bin\latest</PostBuildEvent>
+  </PropertyGroup>
 </Project>

@@ -29,3 +29,6 @@ Root
 
 #Windows Explorer:
 Thumbs.db
+
+#general temp files:
+*.bak
