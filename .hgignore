@@ -1,0 +1,16 @@
+#ignore files for Visual Studio
+#
+#using glob syntax.
+syntax: glob
+
+*.pdb
+*.pch
+*.ncb
+*.obj
+*.bsc
+*.ilk
+*.il
+*.tli
+*.tlh
+*.idb
+*.sbr
