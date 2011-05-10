@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplashScreenUpdater", "SplashScreenUpdater\SplashScreenUpdater.csproj", "{34468FAC-D0EB-4A34-A71B-BA899F452FBC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplashScreenUpdater.2005", "SplashScreenUpdater\SplashScreenUpdater.2005.csproj", "{34468FAC-D0EB-4A34-A71B-BA899F452FBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
