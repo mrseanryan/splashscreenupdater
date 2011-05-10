@@ -27,6 +27,12 @@ Root
 *.csproj.user
 *.csproj.FileListAbsolute.txt
 
+#ignore VS conversion dirs:
+Backup
+_UpgradeReport_Files
+UpgradeLog.XML
+*.orig
+
 #Windows Explorer:
 Thumbs.db
 
