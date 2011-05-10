@@ -57,7 +57,7 @@ namespace SplashScreenUpdater
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
-        internal string ConvertAllEntities(string text)
+        internal void ConvertAllEntities(ref string text)
         {
             string regPat = "(?:&#[0-9]{1,3};)+";
             Regex reg = new Regex(regPat);
@@ -71,7 +71,26 @@ namespace SplashScreenUpdater
                 }
             }
 
-            return text;
+            convertTemplateValues(ref text);
+        }
+
+        /// <summary>
+        /// converts template values, like ${this}
+        /// </summary>
+        /// <param name="text"></param>
+        private void convertTemplateValues(ref string text)
+        {
+            //YYYY is the current year:
+            string template = buildTemplateString("YYYY");
+
+            string yearString = DateTime.Now.Year.ToString();
+
+            text = text.Replace(template, yearString);
+        }
+
+        private string buildTemplateString(string temp)
+        {
+            return "${" + temp + "}";
         }
     }
 }
