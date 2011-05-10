@@ -31,7 +31,7 @@ namespace SplashScreenUpdater
                 Color color = Color.FromArgb(iRed, iGreen, iBlue);
 
                 TextProcessor txtProc = new TextProcessor();
-                text = txtProc.ConvertAllEntities(text);
+                txtProc.ConvertAllEntities(ref text);
 
                 log("Writing text " + text + " on bitmap file at " + bmpFilePath);
 
