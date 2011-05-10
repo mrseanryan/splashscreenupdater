@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("SplashScreenUpdater")]
 [assembly: AssemblyDescription("Writes given text onto the given BMP")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("CR2")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("SplashScreenUpdater")]
 [assembly: AssemblyCopyright("Copyright ©  2011")]
 [assembly: AssemblyTrademark("")]
@@ -30,6 +30,6 @@ using System.Runtime.InteropServices;
 //      Revision
 //
 
-[assembly: AssemblyVersion("1.0.0.2")]
+[assembly: AssemblyVersion("1.0.0.3")]
 
 //[assembly: AssemblyFileVersion("1.0.0.0")]
