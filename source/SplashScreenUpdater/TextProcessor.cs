@@ -11,13 +11,24 @@ namespace SplashScreenUpdater
     /// </summary>
     class TextProcessor
     {
-        internal string ConvertFromISO8859_1_number(int iNum)
+        private readonly Encoding iso88591;
+
+        internal TextProcessor()
+            : this("ISO8859-1")
         {
-            char[] chars = System.Text.ASCIIEncoding.ASCII.GetChars(new byte[]{(byte)iNum});
+        }
+
+        internal TextProcessor(string encodingName)
+        {
+            iso88591 = Encoding.GetEncoding("ISO8859-1");
+        }
+
+        internal string ConvertFromNumber(int iNum)
+        {
+            char[] chars = iso88591.GetChars(new byte[] { (byte)iNum });
 
             return "" + (chars[0]);
         }
-
 
         /// <summary>
         /// Convert from standard ISO8859-1 Entity Number string, as used in HTML.
@@ -31,10 +42,11 @@ namespace SplashScreenUpdater
             Regex reg = new Regex(regPat);
             if(reg.IsMatch(entity))
             {
-                string entityNumAsString = reg.Match(entity).Groups[0].Value;
+                GroupCollection groups = reg.Match(entity).Groups;
+                string entityNumAsString = groups[groups.Count - 1].Value;
                 int iEntityNum = Int32.Parse(entityNumAsString);
 
-                return ConvertFromISO8859_1_number(iEntityNum);
+                return ConvertFromNumber(iEntityNum);
             }
 
             return entity;
@@ -47,7 +59,7 @@ namespace SplashScreenUpdater
         /// <returns></returns>
         internal string ConvertAllEntities(string text)
         {
-            string regPat = "(?:#[0-9]{1,3};)+";
+            string regPat = "(?:&#[0-9]{1,3};)+";
             Regex reg = new Regex(regPat);
             if (reg.IsMatch(text))
             {
@@ -55,7 +67,7 @@ namespace SplashScreenUpdater
                 foreach (Match mat in mc)
                 {
                     string converted = ConvertFromEntityNumberString(mat.Value);
-                    text.Replace(mat.Value, converted);
+                    text = text.Replace(mat.Value, converted);
                 }
             }
 

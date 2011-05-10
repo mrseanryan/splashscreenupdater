@@ -24,12 +24,16 @@ namespace SplashScreenUpdater
                 string text, bmpFilePath;
                 bmpFilePath = argProc.GetArg(ArgsProcessor.ARG_BMP_PATH);
                 text = argProc.GetArg(ArgsProcessor.ARG_TEXT);
-                log("Writing text " + text + " on bitmap file at " + bmpFilePath);
 
                 int iRed = argProc.GetArgAsInt(ArgsProcessor.ARG_COLOR_RED);
                 int iGreen = argProc.GetArgAsInt(ArgsProcessor.ARG_COLOR_GREEN);
                 int iBlue = argProc.GetArgAsInt(ArgsProcessor.ARG_COLOR_BLUE);
                 Color color = Color.FromArgb(iRed, iGreen, iBlue);
+
+                TextProcessor txtProc = new TextProcessor();
+                text = txtProc.ConvertAllEntities(text);
+
+                log("Writing text " + text + " on bitmap file at " + bmpFilePath);
 
                 BmpTextWriter.WriteTextOnBmp(bmpFilePath, text, font,
                     argProc.GetArgAsInt(ArgsProcessor.ARG_FONT_SIZE),
