@@ -2,4 +2,4 @@
 
 please see the Wiki:
 
-[SplashScreenUpdater Wiki](https://bitbucket.org/str/splashscreenupdater/wiki/Home)
+[SplashScreenUpdater Wiki](https://github.com/mrseanryan/splashscreenupdater/wiki)
